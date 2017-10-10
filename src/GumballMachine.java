@@ -84,5 +84,22 @@ public void dispense() {
 		System.out.println("No gumball dispened");
 	}
 }
+public String toString() {
+    String status = "Gumball Machine";
+    if (state == HAS_QUARTER) {
+		status = status + "\n status : HAS QUARTER";
+	}
+	else if (state == NO_QUARTER) {
+		status = status + "\n status : NO QUARTER";
+	}
+	else if(state == SOLD_OUT) {
+		status = status + "\n status : SOLD OUT";
+	}
+	else if (state == SOLD) {
+		status = status + "\n status : SOLD";
+	}
+    status = status + "\n count : "+this.count;
+    return status;
+}
 
 }
